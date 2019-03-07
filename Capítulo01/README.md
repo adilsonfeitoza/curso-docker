@@ -22,3 +22,6 @@ Mostra a versão do docker que estamoa utilizando
 2. `Docker daemon` faz o download da imagem `hello-world` do `Docker Hub`
 3. `Docker daemon` cria um novo container com a imagem e a executa
 4. `Docker daemon` exibe a imagem para o `Docker cliente` no terminal
+
+## Começando a trabalhar com Docker
+
