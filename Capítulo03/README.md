@@ -1,12 +1,12 @@
-# Curso Docker - Cápitulo 02
+# Curso Docker - Cápitulo 03
+    Neste capítulo vamos começar a trabalhar com volumes.
+    Os containers são voláteis, não são nenhum dados apos removidos, por isso a necessidade de usar `Volumes`
+    Podemos criar uma pasta ( que será nosso volume), que ira apontar para o `Docker Host`. Quando escrever na pasta sera escrito no `Docker Host`
 
-## Praticando com o `Docker Run`
-- `docker run dockersamples/static-site`: username do dono da imagem / nome da imagem.
-- `docker run -d dockersamples/static-site`: Executa o container em backgroud e printa o ID_CONTAINER
-- `docker run -d -P dockersamples/static-site`: Linka uma porta da maquina com a porta do container docker. (é escolhido o número da porta automaticamente)
-- `docker run -d -p 12345:80 dockersamples/static-site`: Linka a porta 12345 da maquina com a porta 80 do container.
-- `docker run -d -P --name meu-site dockersamples/static-site`: cria um container com nome.
-- `docker run -d -P -e AUTHOR='Adilson Feitoza' dockersamples/static-site`: define uma variavel de ambiente chamada AUTHOR
-- `docker port ID_CONTAINER`: mostra os mapeamento das portas, na qual pode ser acessada via brownser ex: `http://localhost:32769`.
-- `docker run -v "CAMINHO_VOLUME" NOME_DA_IMAGEM`: cria um volume no respectivo caminho do container.
+## Praticando com o `Volumes`
+- `docker run -v '/var/www' ubuntu`: cria um volume no respectivo caminho do container.
+- `docker run -it -v 'C:\Users\adilson\Desktop:/var/www' ubuntu`: cria um volume no respectivo caminho informado.
 - `docker inspect ID_CONTAINER`: retorna diversas informações sobre o container.
+
+- `docker run -d -p 8080:3000 -v 'C:\Users\gold360\desktop\volume-exemplo:/var/www' -w '/var/www' node npm start`: cria um volume, sobe um container com node, o roda o comando `npm start` dentro do container, associa a porta 8080 com a 3000 do container e inicia o container dentro da pasta `/var/www`
+- `docker run -d -p 8080:3000 -v "$(pwd):/var/www" -w /var/www' node npm start`: cria o volume na pasta que estiver executando o comando.

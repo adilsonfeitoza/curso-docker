@@ -1,4 +1,4 @@
-# Curso Docker - Cápitulo 03
+# Curso Docker - Cápitulo 02
 
 ### Principais estados de uma container
 
@@ -20,6 +20,7 @@
 - `docker run hello-world`: baixa uma imagem no docker-hub e faz sua inicialização.
 - `docker run ubuntu echo 'Olá, Mundo'`: cria um novo container com ubuntu e executa o comando `echo "Olá, Mundo"` dentro do ubuntu.
 - `docker run -it ubuntu`: associa o terminal atual com o terminal do container do ubuntu.
+- `CTRL + D`: sai do terminal
 - `docker start --help`: mostra as opções de start.
 - `docker start ID_CONTAINER`: starta um container já criado.
 - `docker start -a -i ID_CONTAINER`: mostra as opções de start.
