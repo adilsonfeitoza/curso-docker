@@ -9,4 +9,4 @@
 - `docker inspect ID_CONTAINER`: retorna diversas informações sobre o container.
 
 - `docker run -d -p 8080:3000 -v 'C:\Users\gold360\desktop\volume-exemplo:/var/www' -w '/var/www' node npm start`: cria um volume, sobe um container com node, o roda o comando `npm start` dentro do container, associa a porta 8080 com a 3000 do container e inicia o container dentro da pasta `/var/www`
-- `docker run -d -p 8080:3000 -v "$(pwd):/var/www" -w /var/www' node npm start`: cria o volume na pasta que estiver executando o comando.
+- `docker run -d -p 8080:3000 -v "$(pwd):/var/www" -w /var/www' node npm start`: cria o volume na pasta que estiver executando o comando. 
