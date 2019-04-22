@@ -1,0 +1,13 @@
+FROM nginx:latest
+
+LABEL maintainer="Adilson Feitoza"
+
+#COPY /public /var/www/public
+#COPY /docker/config/nginx.conf /etc/nginx.conf
+
+EXPOSE 80 443
+
+ENTRYPOINT [ "nginx" ]
+# Parametros extras para o entrypoint
+CMD ["-g", "daemon off;"]
+
