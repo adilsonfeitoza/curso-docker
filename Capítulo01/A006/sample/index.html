@@ -1,0 +1,12 @@
+<html>
+<script>
+    const target = '11a22b33c'
+    const exp = /(\d\d)(\w)/g
+    console.log(exp.test(target))
+    let resultado
+    while (resultado = exp.exec(target)) {
+        console.log(resultado)
+        console.log(exp.lastIndex)
+    }        
+</script>
+<html>
